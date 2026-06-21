@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2908291445665150406}
-  - component: {fileID: 5983535400390848749}
   - component: {fileID: 1755276203667823709}
+  - component: {fileID: 7899627775272560920}
   m_Layer: 0
   m_Name: Boots
   m_TagString: Untagged
@@ -33,20 +33,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2926113350878103698}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5983535400390848749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4585844740509042706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6432116ffca097d43ab096f53d9a0080, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bootDamage: 60
-  EnemyLife: {fileID: 0}
 --- !u!61 &1755276203667823709
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -93,6 +79,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.065743685, y: 0.1318334}
   m_EdgeRadius: 0
+--- !u!114 &7899627775272560920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585844740509042706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6432116ffca097d43ab096f53d9a0080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bootDamage: 10
+  EnemyLife: {fileID: 0}
 --- !u!1 &5397102390663363167
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2926113350878103698}
   - component: {fileID: 2079574808940691316}
-  - component: {fileID: 4577941657273583701}
+  - component: {fileID: 671115679362828118}
   - component: {fileID: 5868922116997690839}
   - component: {fileID: 8182685201750245714}
   m_Layer: 0
@@ -269,7 +269,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4577941657273583701
+--- !u!114 &671115679362828118
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -281,9 +281,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b91aca910ee13a742b93301d96227cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  jumpForce: 6
-  jumpCounter: 0
+  speed: 6
+  jumpForce: 5
+  jumpCounter: 2
   hP: 100
 --- !u!50 &5868922116997690839
 Rigidbody2D:

@@ -1,9 +1,9 @@
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class lifeManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI text;
+    [SerializeField] Text text;
     private Player player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,6 +14,6 @@ public class lifeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "Life: " + player.hP;
+        text.text = "HP: " + player.hP;
     }
 }

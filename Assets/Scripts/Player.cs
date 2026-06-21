@@ -11,20 +11,32 @@ public class Player : MonoBehaviour
     private int actualJumpCounter;
     [SerializeField] public float hP;
     Rigidbody2D PlayerRB;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    SpriteRenderer PlayerSR;
+
     void Start()
     {
         PlayerRB = GetComponent<Rigidbody2D>();
+        PlayerSR = GetComponent<SpriteRenderer>();
         actualJumpCounter = jumpCounter;
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         hInput = Input.GetAxisRaw("Horizontal");
 
         Vector3 movementDirection = new Vector3(hInput, 0, 0).normalized;
         transform.Translate(movementDirection * (speed * Time.deltaTime));
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            PlayerSR.flipX = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            PlayerSR.flipX = false;
+        }
      
         if (Input.GetKeyDown(KeyCode.Space) && actualJumpCounter>=1)
         {
